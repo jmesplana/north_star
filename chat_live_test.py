@@ -9,11 +9,15 @@ def listen_for_activation():
         audio = r.listen(source)
     try:
         text = r.recognize_google(audio)
-        if "hey northstar" in text.lower():
+        
+        #once the mic is activated, it will listen for your activation code like Siri or OK google.
+        if "hey northstar" in text.lower(): 
             print("Activation code received.")
             engine = pyttsx3.init()
             voices = engine.getProperty('voices')
             engine.setProperty('voice', voices[1].id) # female voice
+            
+            #once it's activited, you will hear the audio below.
             engine.say("How can I help you?")
             engine.runAndWait()
             return listen_for_question()
@@ -42,7 +46,7 @@ def speak_answer(answer):
     engine.say(answer)
     engine.runAndWait()
 
-openai.api_key = "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"
+openai.api_key = "" #enter your API key here
 
 question = listen_for_activation()
 if question:
