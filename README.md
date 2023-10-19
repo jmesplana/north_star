@@ -1,3 +1,5 @@
+![alt text](https://github.com/jmesplana/north_star/blob/main/north_star.png?raw=true)
+<br>
 # NorthStar Voice Assistant
 
 NorthStar is a voice-activated virtual assistant that leverages the power of OpenAI's GPT-3 to provide answers to your questions. It uses the `speech_recognition` library to recognize your voice commands and the `pyttsx3` library for text-to-speech functionality.
